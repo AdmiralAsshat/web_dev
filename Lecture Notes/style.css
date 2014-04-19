@@ -28,3 +28,36 @@ font-family:Helvetica;
 font-size:10;
 font-color: yellow;
 }
+
+#container{
+border: 1px solid black;
+height: auto;
+width: 700px;
+position: relative;
+margin: 0px auto;
+}
+
+#history{
+border: 1px solid black;
+color: blue;
+width: 100%;
+height: auto;
+background-color: orange;
+position: fixed;
+}
+
+#compatibility{
+border: 1px solid black;
+color: blue;
+width: 100%;
+height: auto;
+background-color: yellow;
+}
+
+#controversy{
+border: 1px solid black;
+color: blue;
+width: 100%;
+height: auto;
+background-color: purple;
+}
