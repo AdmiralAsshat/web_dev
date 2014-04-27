@@ -38,12 +38,14 @@ margin: 0px auto;
 }
 
 #history{
+font-family: Arial, Helvetica;
 border: 1px solid black;
 color: blue;
 width: 100%;
 height: auto;
 background-color: orange;
 position: fixed;
+line-height: 2em;
 }
 
 #compatibility{
