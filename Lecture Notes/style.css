@@ -44,8 +44,9 @@ color: blue;
 width: 100%;
 height: auto;
 background-color: orange;
-position: fixed;
 line-height: 2em;
+text-align: center;
+padding: 20px 1px 10px 40px;
 }
 
 #compatibility{
@@ -54,6 +55,7 @@ color: blue;
 width: 100%;
 height: auto;
 background-color: yellow;
+margin: 20px;
 }
 
 #controversy{
