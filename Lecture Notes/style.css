@@ -65,3 +65,9 @@ width: 100%;
 height: auto;
 background-color: purple;
 }
+
+ol{
+color: #990033;
+background-color: #33FF99;
+border: 5px solid #990066;
+}
