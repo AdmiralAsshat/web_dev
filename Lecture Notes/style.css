@@ -31,7 +31,7 @@ font-color: yellow;
 
 #container{
 border: 1px solid black;
-height: auto;
+height: 600 px;
 width: 700px;
 position: relative;
 margin: 0px auto;
@@ -108,4 +108,11 @@ ol{
 color: #990033;
 background-color: #33FF99;
 border: 5px solid #990066;
+}
+
+#footer{
+border: 1px solid black;
+height: 40px;
+width: 700px;
+margin: 0px auto;
 }
