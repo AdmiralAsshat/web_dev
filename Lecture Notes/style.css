@@ -37,6 +37,15 @@ position: relative;
 margin: 0px auto;
 }
 
+#container label(
+width: 150px;
+float: left;
+)
+
+#container .button(
+margin-left: 120px;
+)
+
 #history{
 font-family: Arial, Helvetica;
 border: 1px solid black;

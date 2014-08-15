@@ -16,7 +16,8 @@
 
 <body>
 	<h1>Homepage</h1>
-	
+
+<!--	
 	<div id="nav">
 		<ul>
 			<li><a href="index.html">Homepage</a><br /></li>
@@ -25,27 +26,27 @@
 			<li><a href="admin files/admin1.html">Admin</a><br /></li>
 		</ul>
 	</div>
+-->
 	
 	<div id="container">
-			
-		<p>This is the welcome page.</p>
 		
-		<select>
-			<option value="red">red</option>
-			<option value="blue">blue</option>
-			<option value="yellow">yellow</option>
-			<option value="black">black</option>
-		</select>
-		
-		<textarea name="comments" rows="15" columns="20">
-		
-		</textarea>
+		<form>
+			<div class="field_container"><label>First Name:</label><input type="text" maxlength="15"></div>
+			<div class="field_container"><label>Last Name:</label><input type="text"></div>
+			<div class="field_container"><label>Address:</label><input type="text"></div>
+			<div class="field_container"><label>Password:</label><input type="password"></div>
+			<div class="field_container"><label>Confirm Password:</label><input type="password"></div><br />
+			<div class="button"><input type="submit" value="Submit"></div>
+		</form>
 	
 	</div>
 
+<!--
 	<div id="footer">
 		This is the footer section.
-	</div>
+	</div> 
+-->
+
 </body>
 
 </html>
