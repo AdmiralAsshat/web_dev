@@ -44,6 +44,7 @@ float: left;
 
 #container .button(
 margin-left: 120px;
+text-align: center;
 )
 
 #history{
