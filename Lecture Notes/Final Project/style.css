@@ -1,8 +1,5 @@
 body{
-top: 0px;
-right: 0px;
-bottom: 0px;
-left: 0px;
+padding: 0px;
 width: 100%;
 height: 100%;
 margin: auto;
@@ -14,6 +11,7 @@ border: 1px solid black;
 width: 100%;
 height: 120px;
 background: #202020;
+text-align: center;
 }
 
 #wrapper{
@@ -32,6 +30,38 @@ height: 300px;
 width: 700px; 
 height: 300px;
 }
+
+#header #nav{
+margin-top: 80px;
+margin-left: 350px;
+}
+
+#header #nav ul li{
+list-style-type: none;
+display: inline;
+padding: 3px 8px 3px 8px;
+background-color: #99FF99;
+font-size: 21px;
+font-family: pristina;
+}
+
+#header #nav a{
+text-decoration: none;
+color: black;
+}
+
+#header #nav a:hover{
+color: white;
+}
+
+#heaer #nav a:visited{
+color: white;
+}
+
+#header #nav a:active{
+color: purple;
+}
+
 #footer{
 height: 40px;
 border: 1px solid black;
