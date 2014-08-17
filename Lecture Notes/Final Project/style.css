@@ -28,6 +28,13 @@ border: 1px solid black;
 height: 300px;
 }
 
+#wrapper #main img {
+width: 700px; 
+height: 300px;
+}
 #footer{
 height: 40px;
+border: 1px solid black;
+text-align: center;
+font-size: 14px;
 }
