@@ -52,14 +52,6 @@ color: black;
 color: white;
 }
 
-#header #nav a:visited{
-color: black;
-}
-
-#header #nav a:active{
-color: black;
-}
-
 #header #logo img{
 margin-top: 20px;
 margin-left: -350px;
