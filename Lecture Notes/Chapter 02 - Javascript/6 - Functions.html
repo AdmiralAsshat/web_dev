@@ -2,15 +2,23 @@
 
 <head>
 	<title>Hello World!</title>
-	<script type="text/javascript">
 	
-	function firstname(one, two)
+	<script type="text/javascript">
+
+	
+	function firstname()
 	{
-		document.write(one+" "+two);
+		var first = "Bob";
+		var second = "Bobson";
+		var space = " ";
+		var result = first+space+second;
+
+		return result;
 	}
 	
-	firstname("John","Smith");
-	
+	var text = firstname();
+	document.write(text);
+
 	</script>
 </head>
 
