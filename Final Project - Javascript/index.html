@@ -13,11 +13,22 @@
       x[3] = document.getElementById('password').value;
       x[4] = document.getElementById('cpassword').value;
       
+      /*
       for(var y=0; y < x.length; y++)
       {
         alert("Value:"+x[y]);
       }
+      */
       
+      var h = new Array();
+      
+      h[0] = "<span style='color:red'>Please type a name!</span>";
+      h[1] = "<span style='color:red'>Please type a last name!</span>";
+      h[2] = "<span style='color:red'>Please type an email!</span>";
+      h[3] = "<span style='color:red'>Please type a password!</span>";
+      h[4] = "<span style='color:red'>Please confirm your password!</span>";
+      
+      document.getElementById("mname").innerHTML = "FINLAND";
     }
     
   </script>
@@ -26,14 +37,14 @@
 <body>
   <form>
     <table border="1">
-      <tr><td>Name:</td><td><input type="text" name="name" id="name" /></td></tr>
-      <tr><td>Last Name:</td><td><input type="text" name="lname" id="lname" /></td></tr>
-      <tr><td>Email:</td><td><input type="text" name="email" id="email" /></td></tr>
-      <tr><td>Password:</td><td><input type="text" name="password" id="password" /></td></tr>
-      <tr><td>Confirm Password:</td><td><input type="text" name="cpassword" id="cpassword" /></td></tr>
+      <tr><td>Name:</td><td><input type="text" name="name" id="name" /></td><td><div id="mname"></div></td></tr>
+      <tr><td>Last Name:</td><td><input type="text" name="lname" id="lname" /></td><td><div id="mlname"></div></td></tr>
+      <tr><td>Email:</td><td><input type="text" name="email" id="email" /></td><td><div id="memail"></div></td>/<tr>
+      <tr><td>Password:</td><td><input type="text" name="password" id="password" /></td><td><div id="mpassword"></div></td></tr>
+      <tr><td>Confirm Password:</td><td><input type="text" name="cpassword" id="cpassword" /></td><td><div id="mcpassword"></div></td></tr>
     </table>
     <br />
-    <input type="submit" name="submit" value="submit" onclick="register()" />
+    <input type="button" name="submit" value="submit" onclick="register()" />
   </form>
 </body>
 </html>
