@@ -2,6 +2,25 @@
 
 <head>
   <title>My Form</title>
+  <script type="text/javascript">
+    
+    function register()
+    {
+      var x = new Array();
+      x[0] = document.getElementById('name').value;
+      x[1] = document.getElementById('lname').value;
+      x[2] = document.getElementById('email').value;
+      x[3] = document.getElementById('password').value;
+      x[4] = document.getElementById('cpassword').value;
+      
+      for(var y=0; y < x.length; y++)
+      {
+        alert("Value:"+x[y]);
+      }
+      
+    }
+    
+  </script>
 </head>
 
 <body>
@@ -14,7 +33,7 @@
       <tr><td>Confirm Password:</td><td><input type="text" name="cpassword" id="cpassword" /></td></tr>
     </table>
     <br />
-    <input type="submit" name="submit" value="submit" />
+    <input type="submit" name="submit" value="submit" onclick="register()" />
   </form>
 </body>
 </html>
