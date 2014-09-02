@@ -1,16 +1,17 @@
 students = ["Jimmy", "Susie", "Daniel", "Denise", "Stewie"]
 vegetables = ["carrot","cucumber","celery","potato"];
 
-// Wrote function to accept a delimiter so that I can specify a comma or newline at call
-function display_students(delimiter)
+// Wrote function to accept an array and delimiter so that I can specify a comma or newline at call
+function display_array(array,delimiter)
 {
-  for (var i in students)
+  for (var i in array)
   {
-    document.write(students[i]+delimiter);
+    document.write(array[i]+delimiter);
   }
-  document.write("<br />");
+  document.write("<br />"+"<br />");
 }
 
+/*
 function display_veggies(delimiter)
 {
   for(var j in vegetables)
@@ -19,42 +20,41 @@ function display_veggies(delimiter)
   }
   document.write("<br />");
 }
+*/
 
 //1. Display the elements in students array in new lines.
-display_students("<br />");
+display_array(students,"<br />");
 
 //2. Sort the students array in alphabetical order and display the elements separated by commas.
 students.sort();
-display_students(",");
+display_array(students,",");
+
 
 /*3. Remove the first element from the sorted students array and display the elements separated by
 commas. */
 students.shift();
-display_students(",");
+display_array(students,",");
+
 
 //4. Reverse the students array and display the elements separated by commas.
 students.reverse();
-display_students(",");
-document.write("<br />")
+display_array(students,",");
+
 
 //5. Display the elements in vegetables array in new lines.
-display_veggies(",");
+display_array(vegetables,",");
+
 
 // 6. Remove the last element from the vegetables array and display them separated by spaces.
 vegetables.pop();
-display_veggies(",");
+display_array(vegetables,",");
+
 
 // 7. Join the two arrays and display the elements separated by commas.
 third_array = students.concat(vegetables);
-for(var item in third_array)
-{
-  document.write(third_array[item]+",");
-}
-document.write("<br />"+"<br />")
+display_array(third_array,",");
+
 
 //8. Add a student name at the 3rd position of the new joined array and display the elements separated by commas
 third_array.splice(2,0,"Steve");
-for(var item in third_array)
-{
-  document.write(third_array[item]+",");
-}
+display_array(third_array,",");
