@@ -11,16 +11,6 @@ function display_array(array,delimiter)
   document.write("<br />"+"<br />");
 }
 
-/*
-function display_veggies(delimiter)
-{
-  for(var j in vegetables)
-  {
-    document.write(vegetables[j]+delimiter);
-  }
-  document.write("<br />");
-}
-*/
 
 //1. Display the elements in students array in new lines.
 display_array(students,"<br />");
@@ -32,7 +22,7 @@ display_array(students,",");
 
 /*3. Remove the first element from the sorted students array and display the elements separated by
 commas. */
-students.shift();
+students.shift(); //Remove first value in array and reorder
 display_array(students,",");
 
 
@@ -46,7 +36,7 @@ display_array(vegetables,",");
 
 
 // 6. Remove the last element from the vegetables array and display them separated by spaces.
-vegetables.pop();
+vegetables.pop(); // "Pop" off last value in array.
 display_array(vegetables,",");
 
 
@@ -56,5 +46,5 @@ display_array(third_array,",");
 
 
 //8. Add a student name at the 3rd position of the new joined array and display the elements separated by commas
-third_array.splice(2,0,"Steve");
+third_array.splice(2,0,"Steve"); // Insert value at array index.
 display_array(third_array,",");
