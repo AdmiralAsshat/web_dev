@@ -1,8 +1,11 @@
 for(var i=1; i<=20; i++)
 {
-  for (var j=1; j<=20; j++)
+  var j=1;
+  document.write("<tr>");
+  while(j <= 20)
   {
-    document.write(i*j + " ");
+    document.write("<td>"+(i*j)+"</td>");
+    j++;
   }
-  document.write("<br />");
+  document.write("</tr>");
 }
