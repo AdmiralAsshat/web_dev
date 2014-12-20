@@ -15,7 +15,7 @@
 
   define('USERNAME', 'Dan');
 
-  echo USERNAME;
+  echo USERNAME."<br>";
 
   echo PHP_OS;
 
