@@ -9,7 +9,16 @@
 
   PHP below:
 
+<! -- Comments -->
+
   <?php
+
+# Comment here
+# Another comment here
+
+// Alternative Comment
+
+/* Block comment */
 
     echo "Hello World! as a \"keyword\"";
   
