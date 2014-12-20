@@ -13,17 +13,11 @@
 
   <?php
 
-  $name1 = "John";
-  $name2 = "Joe";
-  $name1 .= $name2;
+  define('USERNAME', 'Dan');
 
-  echo $name1;
+  echo USERNAME;
 
-  $num = 3.66;
-
-  $result = round($num);
-
-  echo $result;
+  echo PHP_OS;
 
   ?>
 </body>
