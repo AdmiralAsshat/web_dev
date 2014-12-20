@@ -13,10 +13,12 @@
 
   <?php
 
-  $name = "Blah";
+  $name1 = "John";
+  $name2 = "Joe";
+  $name1 .= $name2;
 
-  echo "My name is ".$name." .";
-  
+  echo $name1;
+
   ?>
 </body>
 
