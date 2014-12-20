@@ -13,14 +13,9 @@
 
   <?php
 
-# Comment here
-# Another comment here
+  $name = "Blah";
 
-// Alternative Comment
-
-/* Block comment */
-
-    echo "Hello World! as a \"keyword\"";
+  echo "My name is ".$name." .";
   
   ?>
 </body>
