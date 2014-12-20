@@ -19,6 +19,12 @@
 
   echo $name1;
 
+  $num = 3.66;
+
+  $result = round($num);
+
+  echo $result;
+
   ?>
 </body>
 
