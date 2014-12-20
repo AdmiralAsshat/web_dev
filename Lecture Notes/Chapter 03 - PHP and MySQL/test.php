@@ -1,13 +1,15 @@
 <?php
 
-	$name1 = "";
-	$name2 = "Fred";
+	$num = 3;
+	$num1 = 4;
 
-	if($name1 && $name2)
+	if($num == $num1)
 	{
-		echo "True";
+		echo "Variables are equal";
+	} else if ($num < $num1) {
+		echo "Variable ".$num." is less than variable ".$num1;
 	} else {
-		echo "False";
+		echo "None of the conditions are true.";
 	}
 
 ?>
