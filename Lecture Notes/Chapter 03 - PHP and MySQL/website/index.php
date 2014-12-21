@@ -1,4 +1,9 @@
-<?php include('header.php'); ?>
+<?php include('allsections.php'); ?>
+<!-- <?php include('header.php'); ?> -->
+
+<?php
+	echo $head_section;
+	?>
 
 <body>
 	<div id="header">
