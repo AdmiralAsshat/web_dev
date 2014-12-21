@@ -5,7 +5,7 @@
 </head>
 
 <body>
-	<form action="handle.php" method="">
+	<form action="handle.php" method="post">
 		<p>Name: <input type="text" name="name" size="20" maxlength="40" /></p>
 		<p>Email: <input type="text" name="email" size="20" maxlength="40" /></p>
 		<p>Gender: <input type="radio" name="gender" value="M" /> Male
@@ -19,4 +19,5 @@
 		<p><input type="submit" name="submit" value="submit" /></p>
 	</form>
 </body>
+
 </html>
