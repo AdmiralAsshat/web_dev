@@ -8,6 +8,6 @@
 					<option value="30-60">Between 30 and 60</option>
 					<option value="60+">Over 60</option>
 				</select></p>
-		<p>Comments:<textarea name="comments" rows="3" cols="40"></textarea></p>
+		<p>Comments:<textarea name="comments" rows="3" cols="40" maxlength="200"></textarea></p>
 		<p><input type="submit" name="submit" value="submit" /></p>
 	</form>
