@@ -19,8 +19,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
       !empty($password))
     {
       include('connection.php');
+      
+      mysqli_query($dbc, "INSERT INTO users(first_name, last_name,
+      email, gender, age, comments, password)
+      VALUES('$fname', '$lname', '$email', '$gender', '$age', '$comments',
+            '$password')");
+      
+      $registered = mysqli_affected_rows($dbc);
+      
+      echo $registered." rows affected.";
+      
     } else {
-      echo "All values have not been filled.";
+      echo "<p style='color: red;'>All values have not been filled.</p>";
     }
 } else {
   echo "No form has been submitted.";
