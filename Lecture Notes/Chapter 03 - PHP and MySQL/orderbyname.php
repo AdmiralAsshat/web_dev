@@ -3,9 +3,9 @@
 
   include('connection.php');
   
-  $r = mysqli_query($dbc,"SELECT * FROM users");
+  $r = mysqli_query($dbc,"SELECT * FROM users ORDER BY last_name ASC");
   
-  echo "<p><a href='orderbyname.php'>Order by Name</a></p>";
+  echo "<p><a href='output.php'>Order by ID</a></p>";
   
   //format output
   echo "<table align='center' border='1' cellspacing='3' cellpadding='3' width='75%'>
