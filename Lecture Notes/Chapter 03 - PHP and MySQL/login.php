@@ -5,9 +5,13 @@ error_reporting(0);
 
 include("connection.php");
 
-// grab values from login form
+// grab values from login form; escape values first
+/* UNSECURE:
 $login_email = $_POST['login_email'];
-$login_password = $_POST['login_password'];
+Vulnerable to SQL Injection.
+*/
+$login_email = mysqli_real_escape_string($dbc,trim($_POST['login_email']));
+$login_password = mysqli_real_escape_string($dbc, trim($_POST['login_password']));
 
 // Create query and buffer to hold return
 $query = mysqli_query($dbc, "SELECT * FROM users WHERE email='".$login_email."'");
