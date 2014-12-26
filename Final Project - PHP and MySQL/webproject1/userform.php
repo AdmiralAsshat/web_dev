@@ -1,3 +1,42 @@
+<?php
+
+
+if($_SERVER['REQUEST_METHOD'] == 'POST')
+{
+  // Process the form
+
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $email = $_POST['email'];
+  $gender = $_POST['gender'];
+  $age = $_POST['age'];
+  $comments = $_POST['comments'];
+  $password = $_POST['password'];
+
+    if(!empty($fname) && !empty($lname) && !empty($email) &&
+      !empty($gender) && !empty($age) && !empty($comments)  &&
+      !empty($password))
+    {
+      include('connection.php');
+      
+      mysqli_query($dbc, "INSERT INTO users(first_name, last_name,
+      email, gender, age, comments, password, registration_date)
+      VALUES('$fname', '$lname', '$email', '$gender', '$age', '$comments',
+            '$password', NOW())");
+      
+      $registered = mysqli_affected_rows($dbc);
+      
+      echo $registered." rows affected.";
+      
+    } else {
+      echo "<p style='color: red;'>All values have not been filled.</p>";
+    }
+} else {
+  echo "<h3>Please fill out the form below.</h3>";
+}
+
+?>
+
 <html>
 <head>
 <title>Web Form</title>
@@ -5,7 +44,7 @@
 
 <body>
 
-	<form action="processing.php" method="post">
+	<form action="userform.php" method="post">
 		<p>First Name: <input type="text" name="fname" size="20" maxlength="50" /></p>
 		<p>Last Name: <input type="text" name="lname" size="20" maxlength="50" /></p>
 		<p>Email: <input type="text" name="email" size="20" maxlength="50" /></p>

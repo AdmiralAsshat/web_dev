@@ -28,13 +28,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
       # Set vars from the database
       $dbemail = $row['email'];
       $dbpass = $row['password'];
+      $dbfirstname = $row['first_name'];
     }
     
     if($login_email == $dbemail)
     {
       if($login_password == $dbpass)
       {
-        echo "Login successful.";
+        echo "<p>Login successful. Welcome, ".$dbfirstname."!</p>";
+        include("navbar.php");
       } else {
         echo "Your password is incorrect.";
       }
@@ -51,24 +53,3 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 }
 
 ?>
-
-<html>
-
-<head>
-<title></title>
-</head>
-
-<body>
-
-  
-  <form method="post" action="login.php">
-    <p>E-Mail: <input type="text" name="login_email" maxlength="50" /></p>
-    <p>Password: <input type="password" name="login_password" maxlength="50" /></p>
-    <p><input type="submit" value="Login" />
-  </form>
-  
-  <a href="userform.php">Register Here</a>
-  
-</body>
-
-</html>
