@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
       
       $registered = mysqli_affected_rows($dbc);
       
-      echo $registered." rows affected.";
+      echo "<h3>You have registered successfully. Please login <a href='index.php'>here</a>.</h3>";
       
     } else {
       echo "<p style='color: red;'>All values have not been filled.</p>";
@@ -60,7 +60,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 		<p><input type="submit" name="submit" value="submit" /></p>
 	</form>
   
-  <a href="output.php">Check all current records from database</a>
+  <!-- <a href="output.php">Check all current records from database</a> -->
+  <p><a href='index.php'>Go back to login form.</a></p>
 </body>
 
 </html>

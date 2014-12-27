@@ -12,8 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
   
   echo "The user has been successfully deleted.";
   
-} else {
-    echo "Please Login";
 }
 
 ?>

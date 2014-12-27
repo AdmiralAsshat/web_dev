@@ -1,6 +1,11 @@
 
 <?php
 
+  // Page Title
+  echo "<h3>Control Panel</h3>";
+  
+  include('navbar.php');
+  
   include('connection.php');
   
   // Define query
@@ -12,10 +17,11 @@
   // Count number of returned rows
   $num = mysqli_num_rows($r);
   
+  
   // Display results
   if ($num > 0)
   {
-    echo "<p><a href='orderbyname.php'>Order by Name</a></p>";
+    // echo "<p><a href='orderbyname.php'>Order by Name</a></p>";
     
     echo "<p>There are $num registered users.</p>";
     
