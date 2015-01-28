@@ -57,7 +57,10 @@ if(empty($_POST['bestAppliance']))
 }
 
 if ($incomplete == 0)
+{
   echo "Your form has been submitted successfully.";
+}
+
 ?>
 
 <h1>Registration Form</h1>
