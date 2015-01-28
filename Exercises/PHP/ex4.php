@@ -1,8 +1,63 @@
 
 <?php
 
+$incomplete = 0;
 
+if(empty($_POST['name']))
+{
+  echo "Please enter your name. <br/>";
+  $incomplete = 1;
+} else {
+  $incomplete = 0;
+}
 
+if(empty($_POST['email']))
+{
+  echo "Please enter your e-mail address. <br/>";
+  $incomplete = 1;
+} else {
+  $incomplete = 0;
+}
+
+if(empty($_POST['password']))
+{
+  echo "Please enter your password. <br />";
+  $incomplete = 1;
+} else {
+  $incomplete = 0;
+}
+
+if(empty($_POST['confpass']))
+{
+  echo "Please confirm your password. <br/>";
+  $incomplete = 1;
+} else {
+  $incomplete = 0;
+  if($_POST['password'] != $_POST['confpass'])
+  {
+    echo "Your passwords do not match. <br />";
+    $incomplete = 1;
+  }
+}
+
+if(!isset($_POST['numAppliances']))
+{
+  echo "You must select one option. <br />";
+  $incomplete = 1;
+} else {
+  $incomplete = 0;
+}
+
+if(empty($_POST['bestAppliance']))
+{
+  echo "You must select one or more appliances <br />";
+  $incomplete = 1;
+} else {
+  $incomplete = 0;
+}
+
+if ($incomplete == 0)
+  echo "Your form has been submitted successfully.";
 ?>
 
 <h1>Registration Form</h1>
