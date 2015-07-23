@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<album>
+  <artist>Bob Marley</artist>
+  <name>Exodus</name>
+  <year>1979</year>
+</album>
+
+<album>
+  <artist>Metallica</artist>
+  <name>Black Album</name>
+  <year>1991</year>
+</album>
