@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<!-- PCDATA == Parsed character data -->
+<!-- CDATA == Non-parsed data -->
+
+<example>
+  <![CDATA[ <aaa>bb&cc<<<]]>
+</example>
