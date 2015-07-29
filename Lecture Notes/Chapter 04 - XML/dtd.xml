@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!DOCTYPE email SYSTEM "email.dtd">
+
+<email>
+	<to>Bob</to>
+	<from>John</from>
+	<body>This is the body.</body>
+</email>
