@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-9958-1" ?>
+
+<boostore>
+  
+    <book category="Romance">
+        <title lang="en">Everyday Italian</title>
+        <author>Giada</author>
+        <year>2005</year>
+        <price>30.00</price>
+    </book>
+
+</boostore>

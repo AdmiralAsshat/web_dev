@@ -1,0 +1,27 @@
+
+<html>
+  
+<head>
+  <title></title>
+  <script type="text/javascript">
+    if(window.XMLHttpRequest)
+    {
+      xhttp=new XMLHttpRequest();
+    }
+    else // for IE 5/6
+    {
+      xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    
+    xhttp.open("GET","bookstore.xml",false);
+    xhttp.send();
+    xmlDoc=xhttp.responseXML;
+    
+    document.write("XML document loaded into XML DOM Object.");
+  </script>
+</head>
+
+<body>
+  
+</body>
+</html>
