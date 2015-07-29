@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<note xmlns="http://www.w3.org/note"
+xsi:schemaLocation="http://www.w3.org note.xsd"
+>
+
+	<to>Bobby</to>
+	<from>Fred</from>
+	<heading>Subject Line</heading>
+	<body>This is the body</body>
+</note>
