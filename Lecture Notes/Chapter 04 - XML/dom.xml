@@ -13,10 +13,12 @@
     <author>Giade De Laurentiis</author>
     <year>2005</year>
     <price>35.00</price>
+    </book>
     
   <book category="cooking">
     <title lang="en">Book 3</title>
     <author>Giade De Laurentiis</author>
     <year>2005</year>
     <price>50.00</price>
+    </book>
 </bookstore>

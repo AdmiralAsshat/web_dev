@@ -31,16 +31,36 @@
         
         x.nodeValue=text;
         
-        var y=xmlDoc.getElementsByTagName('title')
+        var y=xmlDoc.getElementsByTagName('title');
         for (i=0; i<y.length; i++){
           document.write(y[i].childNodes[0].nodeValue);
-          document.write("<br />")
+          document.write("<br />");
         }
       }
+      
+      function remove(node){
+        xmlDoc=loadXMLDoc('dom.xml');
+        z=xmlDoc.getElementsByTagName(node)[0];
+        z.parentNode.removeChild(z);
+        
+        alert('The element'+node+'has been removed!');
+      }
+      
+      funtion prove(element){
+        x=xmlDoc.getElementsByTagName(element);
+        
+        for(i=0; i<x.length; i++){
+          document.write(x[i].childNodes[0].nodeValue);
+          document.write("<br />");
+        }
+      }
+      
     </script>
   </head>
   
   <body>
     <input type="button" value="change it!" onclick="change('Victor Smells')" />
+    <input type="button" value="remove" onclick="remove('author')" />
+    <input type="button" value="proof" onclick="prove('author')" />
   </body>
 </html>
