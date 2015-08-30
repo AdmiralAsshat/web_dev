@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      
+      function loadXMLDoc(dname) {
+        
+        if (window.XMLHttpRequest) {
+          xhttp=new XMLHttpRequest();
+        }else{
+          xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        
+        xhttp.open("GET", dname, false);
+        xhttp.send();
+        
+        return xhttp.responseXML;
+      }
+      
+      var xmlDoc=loadXMLDoc('dom.xml');
+      x=xmlDoc.getElementsByTagName('title');
+      
+      for (i=0; i<x.length; i++)
+      {
+        document.write(x[i].childNodes[0].nodeValue);
+        document.write("<br />");
+      }
+      
+      function change(text) {
+        var xmlDoc=loadXMLDoc('dom.xml');
+        var x=xmlDoc.getElementsByTagName('title')[0].childNodes[0];
+        
+        x.nodeValue=text;
+        
+        var y=xmlDoc.getElementsByTagName('title')
+        for (i=0; i<y.length; i++){
+          document.write(y[i].childNodes[0].nodeValue);
+          document.write("<br />")
+        }
+      }
+    </script>
+  </head>
+  
+  <body>
+    <input type="button" value="change it!" onclick="change('Victor Smells')" />
+  </body>
+</html>
