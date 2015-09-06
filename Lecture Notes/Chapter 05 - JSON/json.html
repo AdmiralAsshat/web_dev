@@ -6,11 +6,18 @@
           "name":"John",
           "age":"33",
           "phone":"5551234567",
+          "movies":[
+            {'name':'Mad Max', 'age':'54'},
+            {'name':'Avengers: Age of Ultron','age':'34'},
+            {'name':'Inside Out','age':'22'}
+          ]
         };
         
         document.getElementById('name').innerHTML=jsonobject.name;
         document.getElementById('age').innerHTML=jsonobject.age;
         document.getElementById('phone').innerHTML=jsonobject.phone;
+        
+        alert(jsonobject.movies[2].name);
       }
     </script>
   </head>
