@@ -44,3 +44,5 @@ article{
   border: 1px solid black;
   height: 40px;
 }
+
+p[name*="kid"]{color: red;}
