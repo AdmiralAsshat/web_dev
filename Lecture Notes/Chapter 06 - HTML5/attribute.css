@@ -1,4 +1,12 @@
-
+/*
 p[name="monday"]{
   font-size: 30px;
 }
+
+ * {color:blue;}
+
+:not(.monday){color: red;}
+
+#big> p{color: pink;} */
+
+.poem+ p{color: red;}
