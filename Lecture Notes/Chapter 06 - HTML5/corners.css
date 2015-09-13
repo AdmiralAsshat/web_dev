@@ -1,16 +1,21 @@
 
 #main{
-  border: 1px solid black;
+  margin: 0px auto;
+  border: 2px solid red;
   width: 300px;
-  background: -webkit-linear-gradient(top,red, orange);
-  /*background: -webkit-radial-gradient(center,circle, red 0%, orange 50%); */
+  color: white;
   text-align: center;
+  background: blue;
+  transform: translate(200px,200px) rotate(45deg) scale(.5);
+  /* Playing with gradients and radials
+  background: -webkit-linear-gradient(top,red, orange);
+  background: -webkit-radial-gradient(center,circle, red 0%, orange 50%);
   -webkit-border-radius: 20px;
-  -webkit-box-shadow: rgb(110,110,110) 5px 5px 8px;
+  -webkit-box-shadow: rgb(110,110,110) 5px 5px 8px; */
 }
 
 #text{
   font: bold 30px Times New Roman;
-  text-shadow: rgb(110,110,110) 3px 3px 3px;
+  /*text-shadow: rgb(110,110,110) 3px 3px 3px; */
   
 }
