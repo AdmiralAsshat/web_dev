@@ -1,0 +1,9 @@
+
+#main{
+  border: 1px solid black;
+  width: 300px;
+  background: green;
+  text-align: center;
+  -webkit-border-radius: 20px;
+  -webkit-box-shadow: rgb(110,110,110) 5px 5px 8px;
+}
