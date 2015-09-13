@@ -5,13 +5,15 @@
   -webkit-box-orient: horizontal;
   -moz-box-orient: horizontal;
   -ms-box-orient: horizontal;
-  /* -webkit-box-direction: reverse; */
-  /*width: 800px;
+  /* -webkit-box-direction: reverse;
+  width: 800px;
   -webkit-box-pack: center; */
+  height: 400px;
+  -webkit-box-align: end;
 }
 
 /* Make all children space equally */
-#parent> div{
+  #parent> div{
   -webkit-box-flex: 1;
   -moz-box-flex: 1;
   -ms-box-flex: 1;
@@ -39,7 +41,6 @@
   padding: 20px;
   margin: 10px;
   /* -webkit-box-ordinal-group: 4; */
-  /* -webkit-box-flex: 1; */
 }
 
 #child4{
