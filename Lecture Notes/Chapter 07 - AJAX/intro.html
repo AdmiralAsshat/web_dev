@@ -12,7 +12,7 @@
         
         xmlhttp.onreadystatechange = function(){
           if(xmlhttp.readystate == 4){
-            document.getElementById('result').innerHTML = "Yo";
+            document.getElementById('result').innerHTML = xmlhttp.responseText;
           }
         }
         
