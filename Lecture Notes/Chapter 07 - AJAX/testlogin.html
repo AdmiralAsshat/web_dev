@@ -11,14 +11,15 @@
   	}
 
   	var uname = document.getElementById('username').value;
-  	
+  	var upassword = document.getElementById('userpassword').value;
+
   	xmlhttp.onreadystatechange = function(){
   		if(xmlhttp.readystate==4){
   			document.getElementById('result').innerHTML = xmlhttp.responseText;
   		}
   	}
 
-  	url = ""
+  	url = "login.php?name=" + uname + "&password=" + upassword;
   	xmlhttp.open("GET",url,true);
   	xmlhttp.send();
   }
