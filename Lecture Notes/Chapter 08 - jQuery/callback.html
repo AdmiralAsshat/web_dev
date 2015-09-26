@@ -1,0 +1,27 @@
+<html>
+  
+<head>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript">
+  
+  $(document).ready(function(){
+  
+    $("button").click(function(){
+      
+      $("p").hide(500, function(){
+        alert("You took my waffles!");
+        
+      });
+      
+    });
+    
+  });
+  
+  </script>
+</head>
+
+<body>
+  <button>Click me!</button>
+  <p>Waffles!</p>
+</body>
+</html>
