@@ -3,24 +3,37 @@
 <head>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript">
-    /*
     $(document).ready(function(){
+    /*
         $('#link').click(function(){
         $('#div1').toggle(200);
     */
+    
+    /*
       function toggle(element, speed){
         $(element).toggle(speed);
       }
+    */
+    
+      $("#first").click(function(){
+        $("#div1").fadeToggle(500);
+      });
       
-  /*  });     */
+      $("#second").click(function(){
+        $("#div2").fadeToggle(500);
+      });
+      
+    });
   </script>
 </head>
 
 <body>
-  <a href="#" onclick="toggle('#div1', 500)"><h3>Today's News</h3></a>
+<!--  <a href="#" onclick="toggle('#div1', 500)"><h3>Today's News</h3></a> -->
+  <a href="#" id="first"><h3>Today's News</h3></a>
   <p><div id="div1" style="display:none;">And nothing of value was lost.</div><br />
   
-  <a href="#" onclick="toggle('#div2', 500)"><h3>Financial News</h3></a>
+<!--  <a href="#" onclick="toggle('#div2', 500)"><h3>Financial News</h3></a> -->
+  <a href="#" id="second"><h3>Financial News</h3></a>
   <p><div id="div2" style="display:none;">And nothing of value was lost.</div><br />
 <!--  <input type="button" id="button" value="hide it" /> -->
 </body>
