@@ -1,0 +1,26 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      
+      $('#click').click(function(){
+        var data = "hello, I suck <br />";
+        $('#i').prepend(data);
+        $('#i').append(data);
+      });
+      
+    });
+    
+  </script>
+</head>
+
+<body>
+  <p>This is my first p</p>
+  <p>This is my second p</p>
+  <p>This is my third p</p>
+  <div id="i"></div>
+  <input type="button" id="click" value="click" />
+</body>
+
+</html>
