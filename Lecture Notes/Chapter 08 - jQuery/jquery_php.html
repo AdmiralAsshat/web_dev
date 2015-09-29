@@ -1,0 +1,33 @@
+<html>
+
+<head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+  
+    $('#send').click(function(){
+      $('#result').hide();
+      var vname = $('#name').val();
+      var vpassword = $('#password').val();
+      $.post('login_jquery.php',{phpname:vname,phppassword:vpassword},function(data){
+        $('#result').fadeIn('slow').html(data);
+        
+      });
+    });
+    
+  });
+  
+</script>
+</head>
+
+<body>
+
+Name:<input type="text" id="name" /><br />
+Password:<input type="password" id="password" /><br />
+
+<p>
+<input type="button" id="send" value="submit" />
+<p>
+<div id="result" style="display:none;"></div>
+</body>
+</html>
