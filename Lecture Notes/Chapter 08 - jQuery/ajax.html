@@ -3,20 +3,28 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
-      $("#button").click(function(){
+      $("form").submit(function(){
+        /*
         var sendu = $("#username").val();
         var sendp = $("#password").val();
+        */
+        var send = $(this).serialize();
         
         $.ajax({
           type: "POST",
           url: "ajax.php",
-          data: "username="+sendu+"&password="+sendp,
+          data: send,
           dataType: "json",
-          success: function(msg,string,jqXHR){
-            $("#result").html(msg.name+"<br />"+msg.password);
+          success: function(msg){
+            $("#result").html("Name: "+msg.name+"<br />"+
+                              "Password: "+msg.password);
           }
           
         });
+        
+        //Return form false to prevent values in header
+        return false;
+        
       });
       
     });
@@ -24,9 +32,11 @@
 </head>
 
 <body>
-  Name:<input type="text" id="username" name="username" /><br />
-  Password:<input type="password" id="password" name="password" /><br />
-  <input type="button" id="button" value="submit" />
-  <p><div id="result"></div>
+  <form>
+    Name:<input type="text" id="username" name="username" /><br />
+    Password:<input type="password" id="password" name="password" /><br />
+    <input type="submit" id="submit" value="submit" />
+    <p><div id="result"></div>
+  </form>
 </body>
 </html>
