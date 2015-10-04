@@ -8,9 +8,9 @@
         var sendp = $("#password").val();
         
         $.ajax({
-          type:"POST",
+          type: "POST",
           url: "ajax.php",
-          data: "username="+sendu+"&password"+sendp,
+          data: "username="+sendu+"&password="+sendp,
           dataType: "json",
           success: function(msg,string,jqXHR){
             $("#result").html(msg.name+"<br />"+msg.password);
@@ -27,6 +27,6 @@
   Name:<input type="text" id="username" name="username" /><br />
   Password:<input type="password" id="password" name="password" /><br />
   <input type="button" id="button" value="submit" />
-  <p><div id="result">Hi</div>
+  <p><div id="result"></div>
 </body>
 </html>
