@@ -1,0 +1,37 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#test").draggable({containment: 'parent', cursor: 'pointer',
+                            opacity: 0.60, grid:[20,20], revert: true,
+                            start: function(){
+                              $("#result").text("GO!");
+                            },
+                            drag: function(){
+                              $("#result").text("MOVING!");
+                            },
+                            stop: function(){
+                              $("#result").text("STOP!");
+                            }
+      });
+    });
+    
+  </script>
+  <style>
+    #box{
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <span id="test">Hello?</span>
+  </div>
+  <div id="result"></div>
+</body>
+</html>
