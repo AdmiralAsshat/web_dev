@@ -17,6 +17,26 @@
                               $("#result").text("STOP!");
                             }
       });
+      
+      $("#name, #city").draggable({containment:'document', revert: true, start:function(){
+       contents = $(this).text();
+      }});
+      
+      $("#dropbox").droppable({hoverClass: 'border', tolerance: 'touch', accept: '#name',
+        /*
+        over: function(){
+        $("#dropbox").text("Something is hovering inside the box.");
+      }, out: function(){
+        $("#dropbox").text("Something is out of the box.");
+      }, drop: function(){
+        */
+                              drop:function(){
+                              $("#dropbox").append(contents + "<br />");
+                              }
+        
+      });
+    
+      
     });
     
   </script>
@@ -26,12 +46,26 @@
       height: 200px;
       background-color: yellow;
     }
+    
+    #dropbox{
+      height: 200px;
+      width: 200px;
+      background-color: yellow;
+    }
+    
+    .border{
+      border: 1px solid black;
+    }
   </style>
 </head>
 <body>
   <div id="box">
     <span id="test">Hello?</span>
   </div>
-  <div id="result"></div>
+  <p></p><div id="result"></div>
+  <span id="name">Bob</span>
+  <span id="name">Dan</span>
+  <span id="city">London</span>
+  <p><div id="dropbox"></div>
 </body>
 </html>
