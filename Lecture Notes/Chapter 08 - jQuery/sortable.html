@@ -1,0 +1,45 @@
+<html>
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <style>
+    ul{
+      border: 1px solid black;
+      padding: 0px;
+      width: 100px;
+      height: 100px;
+      list-style: none;
+    }
+  </style>
+  <script>
+    $(document).ready(function(){
+      $("#cities, #food").sortable({containment:'document', tolerance:'pointer',
+                            cursor:'pointer', revert:'true', opacity: 0.60,
+                            connectWith: '#cities, #food',
+                            update: function(){
+                              var list = $(this).text();
+                              $('#newlist').text(list);
+                            }
+      });
+    });
+  </script>
+</head>
+<body>
+  <ul id="cities">
+    <li>London</li>
+    <li>Paris</li>
+    <li>Moscow</li>
+    <li>Tokyo</li>
+    <li>Rome</li>
+  </ul>
+  
+  <ul id="food">
+    <li>Spam</li>
+    <li>Spam</li>
+    <li>Spam</li>
+    <li>Spam</li>
+  </ul>
+  <div id="newlist"></div>
+</body>
+</html>
