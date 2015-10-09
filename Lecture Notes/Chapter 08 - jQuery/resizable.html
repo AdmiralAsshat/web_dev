@@ -1,0 +1,33 @@
+<html>
+<head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <style>
+    #box{
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      border: 1px solid black;
+    }
+    
+    #parentbox{
+      width: 500px;
+      height: 500px;
+      background-color: #f0f0f0;
+      border: 1px solid black;
+    }
+  </style>
+  <script>
+    $(document).ready(function(){
+      $("#box").resizable({containment: 'parent', animate: true,
+                          ghost: true, animateDuration: 'fast'});
+    });
+  </script>
+</head>
+<body>
+  <div id="parentbox">
+    <div id="box"></div>
+  </div>
+</body>
+</html>
