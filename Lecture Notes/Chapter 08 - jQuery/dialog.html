@@ -1,0 +1,29 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#click').click(function(){
+        $('#dialog').attr('title','Dialog Box').text('This is the dialog box.').
+        dialog({buttons:{
+          'OK':function(){
+            $(this).dialog('close');
+          },
+          'Return':function(){
+            alert('returned');
+          }
+        },
+        closeOnEscape: true, draggable: false, show: 'fade', modal: true
+        });
+      });
+    });
+  </script>
+ 
+</head>
+<body>
+  <input type="button" value="click" id="click" />
+ <div id="dialog"></div>
+</body>
+</html>
