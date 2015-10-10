@@ -1,0 +1,38 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <style>
+    #tabs{
+      font-size: 12px;
+      width: 300px;
+    }
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#tabs").tabs({ajaxOptions:{
+        error: function(xhr,index,status,anchor){
+          $(anchor.hash).text('Could not connect to server');
+        }
+  /*  }, event:'mouseover' */
+      }, cookie:{expires:1}
+        
+      }).find('.ui-tabs-nav').sortable({axis:'x'});
+    });
+  </script>
+</head>
+<body>
+  <div id="tabs">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="new.php">PHP File</a></li>
+    </ul>
+    <div id="about"><p>This is the about section</div>
+    <div id="contact"><p>This is the contact section</div>
+    <div id="home"><p>This is the home section</div>
+  </div>
+</body>
+</html>
