@@ -1,0 +1,28 @@
+<html>
+<head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+ <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+ 
+ <script type="text/javascript">
+   $(document).ready(function(){
+     $("#content").accordion({icons:{'header':'ui-icon-plus',
+                                    'headerSelected':'ui-icon-minus'},
+       collapsible:true, active:false
+     });
+   });
+ </script>
+</head>
+<body>
+ <div id="content">
+   <h3><a href="#">Home</a></h3>
+   <div>This is the Home page.</div>
+   
+   <h3><a href="#">About</a></h3>
+   <div>This is the About page.</div>
+   
+   <h3><a href="#">Contact</a></h3>
+   <div>This is the Contact page.</div>
+ </div>
+</body>
+</html>
